@@ -1,0 +1,264 @@
+
+Subtract the Product and Sum of Digits of an Integer
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the number : ");
+	    int num = sc.nextInt();
+	    int sum=0, prod=1;
+	    while(num > 0) {
+	        sum += (num%10);
+	        prod *= (num%10);
+	        num /= 10;
+	    } System.out.println("The diff between prod and sum is "+(prod-sum));
+	}
+}
+--------------------------------------------------------------------
+
+Input a number and print all the factors of that number (use loops)
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the number : ");
+	    int num = sc.nextInt();
+	    for(int i=1; i<=num/2; i++) {
+	        if(num % i == 0) {
+	            System.out.print(i+" ");
+	        }
+	    } System.out.print(num);
+	}
+}
+--------------------------------------------------------------------
+
+Take integer inputs till the user enters 0 and print the sum of all numbers (HINT: while loop)
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int sum = 0;
+	    int num;
+	    while(true) {
+	        num = sc.nextInt();
+	        if(num == 0) {
+	            break;
+	        } sum += num;
+	    } System.out.println(sum);
+	}
+}
+--------------------------------------------------------------------
+
+Take integer inputs till the user enters 0 and print the largest number from all
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int num, maxVal=Integer.MIN_VALUE;
+	    while(true) {
+	        num = sc.nextInt();
+	        if(num == 0) {
+	            break;
+	        } maxVal = Math.max(num, maxVal);
+	    } System.out.println(maxVal);
+	}
+}
+--------------------------------------------------------------------
+
+Factorial Program In Java
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int num = sc.nextInt();
+	    int ans = 1;
+	    for(int i=2; i<=num; i++) {
+	        ans *= i;
+	    } System.out.println(ans);
+	}
+}
+--------------------------------------------------------------------
+
+Calculate Discount Of Product
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the amount of product");
+	    float amount = sc.nextInt();
+	    System.out.println("Enter the percentage of discount");
+	    float perc = sc.nextInt();
+	    float actualAmount = amount - (amount*perc)/100;
+	    System.out.println(actualAmount);
+	}
+}
+--------------------------------------------------------------------
+
+Power In Java
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int num = sc.nextInt();
+	    int pow = sc.nextInt();
+	    long ans = 1;
+	    for(int i=0; i<pow; i++) {
+	        ans *= num;
+	    } System.out.println(ans);
+	}
+}
+--------------------------------------------------------------------
+
+Calculate CGPA Java Program
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the percentage : ");
+	    float perc = sc.nextFloat();
+	    System.out.println("The CGPA would be : "+perc/9.5);
+	}
+}
+--------------------------------------------------------------------
+
+Find Ncr & Npr
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+    public static float fact(float n) {
+        int ans = 1;
+        for(int i=2; i<=n; i++) {
+            ans *= i;
+        } return ans;
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the value of n and r");
+	    int n = sc.nextInt();
+	    int r = sc.nextInt();
+	    if(n < r) {
+	        System.out.println("Error Occurs!!!!!!!");
+	    } else {
+	        // Combination
+    	   float comb = (fact(n))/(fact(n-r)*fact(r));
+    	   System.out.println("The combination of "+n+"C"+r+" is "+comb);
+    	   //Permutation
+    	   float perm = fact(n)/(fact(n-r));
+    	   System.out.println("The permutation of "+n+"P"+r+" is "+perm);
+	    }	   
+	}
+}
+--------------------------------------------------------------------
+
+Reverse A String In Java
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the string");
+	    String str = sc.nextLine();
+	    String newStr = "";
+	    for(int i=0; i<str.length(); i++) {
+	        newStr += str.charAt(str.length()-i-1);
+	    } System.out.println(newStr);
+	}
+}
+--------------------------------------------------------------------
+
+Java Program Vowel Or Consonant
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    char ch = sc.next().charAt(0);
+	    if(ch=='a' | ch=='e' | ch=='i' | ch=='o' | ch=='u') {
+	        System.out.println("It's a vowel");
+	    } else {
+	        System.out.println("It's a Consonant");
+	    }
+	}
+}
+--------------------------------------------------------------------
+
+Perfect Number In Java
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the number");
+	    int num = sc.nextInt();
+	    int sum = 0;
+	    for(int i=1; i<=num/2; i++) {
+	        if(num % i == 0) sum += i;
+	    } if(num == sum) System.out.println(num+" is perfect number");
+	     else System.out.println(num+" is not perfect number");
+	}
+}
+--------------------------------------------------------------------
+
+Sum Of A Digits Of Number
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int num = sc.nextInt();
+	    int sum = 0;
+	    while(num > 0) {
+	        sum += (num%10);
+	        num /= 10;
+	    } System.out.println(sum);
+	}
+}
+--------------------------------------------------------------------
+
+Write a program to print the sum of negative numbers, sum of positive even numbers, sum of positive odd numbers 
+from a list of numbers (N) entered by the user.The list terminates when the user enters a zero
+--------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the numbers");
+	    int negSum=0, posEvSum=0, poOdSum=0;
+	    while(true) {
+	        int num = sc.nextInt();
+	        if(num == 0) break;
+	        else if(num < 0) {
+	            negSum += num;
+	        } else if(num > 0 & num%2==0) {
+	            posEvSum += num;
+	        } else {
+	            poOdSum += num;
+	        }
+	    } System.out.println("Sum of negative numbers "+negSum);
+	    System.out.println("Sum of Even positive number is "+posEvSum);
+	    System.out.println("Sum of odd positive number is "+poOdSum);
+	}
+}
+--------------------------------------------------------------------
