@@ -1,0 +1,92 @@
+
+Question 1 - Number is prime or not
+------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the number");
+	    int num = sc.nextInt();
+	    int count = 0;
+	    for(int i=2; i<num/2; i++) {
+	        if(num%i==0) {
+	            System.out.println(num+" is not prime number");
+	            count++;
+	            break;
+	        }
+	    } if(count == 0) {
+	        System.out.println(num+" is a prime number");
+	    }
+	}
+}
+--------------------------------------------------------------------------
+
+Question 2 - Input a year and find whether it is a leap year or not
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+Question 3 - Take two numbers and print the sum of both
+--------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter both numbers : ");
+	    int a = sc.nextInt();
+	    int b = sc.nextInt();
+	    System.out.println("The sum of both numbers is : "+(a+b));
+	}
+}
+--------------------------------------------------------------------------
+
+Question 4 - Take a number as input and print the multiplication table for it
+--------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter a number : ");
+	    int n = sc.nextInt();
+	    for(int i=1; i<=10; i++) {
+	        System.out.println(n+"*"+i+"="+n*i);
+	    }
+	}
+}
+--------------------------------------------------------------------------
+
+Question 5 - Take 2 numbers as inputs and find their HCF and LCM
+--------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter two numbers : ");
+	    int num1 = sc.nextInt();
+	    int num2 = sc.nextInt();
+	   // For HCF
+	   int min = Math.min(num1, num2);
+	   for(int i = min; i>0; i--) {
+	       if((num1%i == 0) & (num2%i == 0)) {
+	           System.out.println("The HCF of both numbers is : "+i);
+	           break;
+	       }
+	   }
+	   //For Lcm
+	   int max = Math.max(num1, num2);
+	   for(int i = max; i>0; i++) {
+	       if((i%num1==0) & (i%num2==0)) {
+	           System.out.println("The LCM of both numbers is : "+i);
+	           break;
+	       }
+	   }
+	}
+}
+--------------------------------------------------------------------------
+
+Question 6- Keep taking numbers as inputs till the user enters ‘x’, after that print sum of all
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
