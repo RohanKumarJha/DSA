@@ -1,0 +1,3 @@
+Transpose of matrix
+Rotation of matrix
+Pascal's triangle

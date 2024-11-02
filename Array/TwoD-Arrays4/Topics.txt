@@ -1,0 +1,3 @@
+Sum of Rectangle using Brute Force Method
+Sum of Rectangle using pre-calculating the horizontal sum for each row
+Sum of Rectangle using prefix sum over both rows and cols
