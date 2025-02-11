@@ -58,7 +58,7 @@ public class SearchQuestion {
                 break;
             }
             else if(nums[mid-1]<nums[mid]&nums[mid]<nums[mid+1]) {
-                s=mid+1;
+                s=mid+1;  
             } else {
                 e=mid-1;
             }
