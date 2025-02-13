@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
     // Question 1
     public static void allNumberIterative(int n) {
@@ -135,5 +138,100 @@ public class Solution {
         if(arr[idx] == elm) return true;
         elmExistOrNotRecursive(arr, idx-1, elm);
         return false;
+    }
+
+    public static void allIndicesIterative(int[] arr,int elm) {
+        for(int i=0; i<arr.length; i++) {
+            if(arr[i] == elm) System.out.print(i+" ");
+        }
+    }
+    public static void allIndicesRecursive(int[] arr,int elm,int n) {
+        if(n < 0) return;
+        if(arr[n] == elm) System.out.print(n+" ");
+        allIndicesRecursive(arr, elm, n-1);
+    }
+
+    public static void arrayToArrayListIterative(int[] arr) {
+        List<Integer> list = new ArrayList<>();
+        for(int i=0; i<arr.length; i++) {
+            list.add(arr[i]);
+        }
+        for(int i=0; i<list.size(); i++) {
+            System.out.print(list.get(i)+" ");
+        }
+    }
+    public static void arrayToArrayListRecursive(int[] arr,List<Integer> list,int idx) {
+        if(idx < 0) return;
+        arrayToArrayListRecursive(arr, list, idx-1);
+        list.add(arr[idx]);
+        System.out.print(list.get(idx)+" ");
+    }
+
+    public static boolean isSortedIterative(int[] arr) {
+        for(int i=1; i<arr.length; i++) {
+            if(arr[i] < arr[i-1]) return false;
+        } return true;
+    }
+    public static boolean isSortedRecursive(int[] arr,int len) {
+        if(len < 1) return true;
+        if(arr[len] < arr[len-1]) return false;
+        return isSortedRecursive(arr, len-1);
+    }
+
+    public static int lastIndexIterative(int[] arr,int elm) {
+        int pos = -1;
+        for(int i=0; i<arr.length; i++) {
+            if(arr[i] == elm) pos=i;
+        } return pos;
+    }
+    public static int lastIndexRecursive(int[] arr,int elm,int idx) {
+        if(idx < 0) return idx;
+        if(arr[idx] == elm) return idx;
+        return lastIndexRecursive(arr, elm, idx-1);
+    }
+
+    public static String removeAllOccOfIterative(String str) {
+        StringBuilder result = new StringBuilder();
+        for(int i=0; i<str.length(); i++) {
+            if(str.charAt(i) != 'a') {
+                result.append(str.charAt(i));
+            }
+        } return result.toString();
+    }
+    public static String removeAllOccOfRecursive(String str,StringBuilder sb,int idx) {
+        if(idx == str.length()) return sb.toString();
+        if(str.charAt(idx) != 'a') sb.append(str.charAt(idx));
+        return removeAllOccOfRecursive(str, sb, idx+1);
+    }
+
+    public static String reverseStringIterative(String str) {
+        StringBuilder result = new StringBuilder(str);
+        int start=0, end=result.length()-1;
+        while(start < end) {
+            char temp = result.charAt(start);
+            result.setCharAt(start, result.charAt(end));
+            result.setCharAt(end, temp);
+            start++; end--;
+        }  return result.toString();      
+    }
+    public static String reverseStringRecursive(StringBuilder result,int start,int end) {
+        if(start >= end) return result.toString();
+        char temp = result.charAt(start);
+        result.setCharAt(start, result.charAt(end));
+        result.setCharAt(end, temp);
+        return reverseStringRecursive(result, start+1, end-1);
+    }
+
+    public static boolean palindromeIterative(String str) {
+        int start=0, end=str.length()-1;
+        while(start < end) {
+            if(str.charAt(start) != str.charAt(end)) return false;
+            start++; end--;
+        } return true;
+    }
+    public static boolean palindromeRecursive(String str,int start,int end) {
+        if(start >= end) return true;
+        if(str.charAt(start) != str.charAt(end)) return false;
+        return palindromeRecursive(str, start+1, end-1);
     }
 }

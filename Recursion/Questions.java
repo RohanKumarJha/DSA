@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Questions {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -82,27 +84,114 @@ public class Questions {
                 // Solution.GCDRecursive(num1, num2);
 
             // Question 8 - Print array
-                int[] arr = {2,5,7,6,3,4,8};
+                // int[] arr = {2,5,7,6,3,4,8};
 
                 // Method 1 - Using Iterative approach
-                Solution.printArrayIterative(arr);
-                System.out.println();
+                // Solution.printArrayIterative(arr);
+                // System.out.println();
 
                 // Method 2 - Using recursive approach
-                Solution.printArrayRecursive(arr, arr.length-1);
-                System.out.println();
+                // Solution.printArrayRecursive(arr, arr.length-1);
+                // System.out.println();
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter the element ");
-            int elm = Integer.parseInt(br.readLine());
+            // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            // System.out.println("Enter the element ");
+            // int elm = Integer.parseInt(br.readLine());
             // Question 9 - elm exist or not
 
                 // Method 1 - Using iterative approach
-                System.out.println("Element is "+(Solution.elmExistOrNotIterative(arr, elm)?"present":"not present"));
+                // System.out.println("Element is "+(Solution.elmExistOrNotIterative(arr, elm)?"present":"not present"));
 
                 // Method 2 - Using recursive approach
-                System.out.println("Element is "+(Solution.elmExistOrNotRecursive(arr,arr.length-1, elm)?"present":"not present"));
+                // System.out.println("Element is "+(Solution.elmExistOrNotRecursive(arr,arr.length-1, elm)?"present":"not present"));
+
+            // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int[] arr = {2,3,5,6,8,1,9,1,3,1};
 
             // Question 10 - return all the indices
+            // System.out.println("Enter the element you want to find");
+            // int elm = Integer.parseInt(br.readLine());
+
+                // Method 1 - Using iterative approach
+                // Solution.allIndicesIterative(arr,elm);
+                // System.out.println();
+
+                // Method 2 - Using recursive approach
+                // Solution.allIndicesRecursive(arr,elm,arr.length-1);
+
+            // Question 11 - return all element into arrayList
+                // Method 1 - Using iterative approach
+                // Solution.arrayToArrayListIterative(arr);
+
+                // Method 2 - Using recursive approach
+                // List<Integer> list = new ArrayList<>();
+                // Solution.arrayToArrayListRecursive(arr, list, arr.length-1);
+
+            // Question 12 - Implemented isSorted method
+                // Method 1 - Using iterative approach
+                // if(Solution.isSortedIterative(arr)) System.out.println("Array is sorted");
+                // else System.out.println("Array is not sorted");
+
+                // Method 2 - Using recursive approach
+                // if(Solution.isSortedRecursive(arr,arr.length-1)) System.out.println("Array is sorted");
+                // else System.out.println("Array is not sorted");
+
+            // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            // System.out.println("Enter the element ");
+
+            // Question 13 - last index of target
+                // Method 1 - Using iterative approach
+                // int elm = Integer.parseInt(br.readLine());
+                // System.out.println(Solution.lastIndexIterative(arr, elm));
+
+                // Method 2 - Using recursive approach
+                // int elm = Integer.parseInt(br.readLine());
+                // if(Solution.lastIndexRecursive(arr, elm, arr.length-1) == -1) System.out.println("Element not found");
+                // else System.out.println("Element found on "+Solution.lastIndexRecursive(arr, elm, arr.length-1)+" index");
+
+            // Question 14 - Remove all occurence of a
+                // String str = "abcax";
+
+                // Method 1 - Using iterative approach
+                // System.out.println(Solution.removeAllOccOfIterative(str));
+
+                // Method 2 - Using recursive approach
+                // StringBuilder sb = new StringBuilder();
+                // System.out.println(Solution.removeAllOccOfRecursive(str, sb, 0));
+
+            // Question 15 - Reverse String
+                // String str = "Rohan Kumar Jha";
+
+                // Method 1 - Using iterative approach
+                // System.out.println(Solution.reverseStringIterative(str));
+
+                // Method 2 - Using recursive approach
+                // StringBuilder result = new StringBuilder(str);
+                // System.out.println(Solution.reverseStringRecursive(result, 0, result.length()-1));
+
+            // Question 16 - Palindrome String
+                // String str = "abcba";
+
+                // Method 1 - Using iterative approach
+                // if(Solution.palindromeIterative(str)) System.out.println("String is palindrome");
+                // else System.out.println("String is not palindrome");
+
+                // Method 2 - Using recursive approach
+                // if(Solution.palindromeRecursive(str,0,str.length()-1)) System.out.println("String is palindrome");
+                // else System.out.println("String is not palindrome");
+
+            // Question 17 - Palindrome Integer
+                // int val = 12321;
+                // String str = Integer.toString(val);
+
+                // Method 1 - Using iterative approach
+                // if(Solution.palindromeIterative(str)) System.out.println("Integer is palindrome");
+                // else System.out.println("Integer is not palindrome");
+
+                // Method 2 - Using recursive approach
+                // if(Solution.palindromeRecursive(str,0,str.length()-1)) System.out.println("Integer is palindrome");
+                // else System.out.println("Integer is not palindrome");
+
+            // Question (18-19) - Subsequences
     }
 }
