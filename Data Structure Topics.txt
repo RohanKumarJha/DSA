@@ -1,0 +1,27 @@
+Arrays: Introduction, operations, applications.
+
+Strings: Manipulation, pattern matching.
+
+Linked Lists: Singly, doubly, and circular linked lists, operations, applications.
+
+Stacks: Operations, applications, implementation using arrays and linked lists.
+
+Queues: Operations, applications, implementation using arrays and linked lists, circular queue, priority queue.
+
+Trees: Binary trees, binary search trees, AVL trees, red-black trees, B-trees, and B+ trees.
+
+Heaps: Min-heap, max-heap, operations, applications, heap sort.
+
+Hash Tables: Hashing techniques, collision resolution, applications.
+
+Graphs: Representation (adjacency matrix/list), traversal (BFS, DFS), shortest path algorithms (Dijkstra's, Bellman-Ford), minimum spanning tree algorithms (Kruskal's, Prim's), graph coloring, bipartite graph, topological sorting.
+
+Tries: Insert, search, delete operations, applications.
+
+Disjoint Set (Union-Find): Union by rank, path compression, applications.
+
+Segment Trees: Construction, range queries, lazy propagation.
+
+Fenwick Tree (Binary Indexed Tree): Construction, operations, applications.
+
+Interval Trees: Construction, operations, applications.
