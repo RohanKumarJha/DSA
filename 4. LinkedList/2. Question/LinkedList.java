@@ -1,3 +1,4 @@
+
 public class LinkedList {
     ListNode head = null;
     ListNode temp = head;
@@ -29,5 +30,39 @@ public class LinkedList {
             prev = curr;
             curr = agla;
         } head = prev;
+    }
+
+    public ListNode merge(ListNode head1, ListNode head2) {
+        ListNode temp1 = head1, temp2 = head2;
+        ListNode head = null;
+        ListNode temp = null;
+    
+        while (temp1 != null && temp2 != null) {
+            if (temp1.data > temp2.data) {
+                if (head == null) {
+                    head = temp2;
+                    temp = temp2;
+                } else {
+                    temp.next = temp2;
+                    temp = temp2;
+                } temp2 = temp2.next;
+            } else {
+                if (head == null) {
+                    head = temp1;
+                    temp = temp1;
+                } else {
+                    temp.next = temp1;
+                    temp = temp1;
+                } temp1 = temp1.next;
+            }
+        }
+    
+        // Attach remaining nodes from either list
+        if (temp1 != null) {
+            temp.next = temp1;
+        }
+        if (temp2 != null) {
+            temp.next = temp2;
+        } return head;    
     }
 }
