@@ -1,68 +1,110 @@
 public class LinkedList {
     ListNode head = null;
     ListNode tail = null;
-    int length = 0;
-
-    public void insertAtEnd(int elm) {
-        ListNode node = new ListNode(elm);
+    int size = 0;
+    
+    public void addFirst(int data) {
+        ListNode curr = new ListNode(data);
         if(head == null) {
-            head = node;
+            head = curr;
+            tail = curr;
         } else {
-            tail.next = node;
-        } tail = node;
-        length++;
+            curr.next = head;
+            head = curr;
+        } size++;
     }
 
-    public void insertAtBeginning(int elm) {
-        ListNode node = new ListNode(elm);
-        if(head != null) {
-            node.next = head;  
-        } head = node;
-        length++;
+    public void addLast(int data) {
+        ListNode curr = new ListNode(data);
+        if(head == null) {
+            head = curr;
+            tail = curr;
+        } else {
+            tail.next = curr;
+            tail = curr;
+        } size++;
     }
 
-    public void insert(int index,int elm) {
-        ListNode node = new ListNode(elm);
+    public void add(int index, int data) {
+        ListNode curr = new ListNode(data);
+        if (index == 0) { 
+            addFirst(data); 
+            return; 
+        } else if (index == size) { 
+            addLast(data); 
+            return; 
+        } else if (index > size) { 
+            System.out.println("Index shouldn't be greater than size");
+            return;
+        }
+    
         ListNode temp = head;
-        if(index > length) {
-            System.out.println("Index OutOfBound....");
-        } else {
-            if(index == 0) {
-                insertAtBeginning(elm);
-            } else if(index == 1) {
-                node.next = temp.next;
-                temp = node;
-            } else {
-                for(int i=0; i<index-1; i++) {
-                    temp = temp.next;
-                } node.next = temp.next;
-                temp = node;
-            }
-        } length++;
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+        
+        curr.next = temp.next; // Correct insertion step
+        temp.next = curr; // Link the new node
+        size++;
     }
 
     public void display() {
-        ListNode node = head;
-        while(node != null) {
-            System.out.print(node.data+" ");
-            node = node.next;
+        ListNode curr = head;
+        while(curr != null) {
+            System.out.print(curr.data+" ");
+            curr = curr.next;
+        } System.out.println();
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public void removeFirst() {
+        if(size == 0) {
+            System.out.println("There is no element to remove");
+        } else {
+            head = head.next;
+            size--;
         }
     }
 
-    public void deleteAtIndex(int index) {
-        ListNode node = head;
-        if(index > length) {
-            System.out.println("Index outOfBound....");
+    public void removeLast() {
+        ListNode curr = head;
+        if(size == 0) {
+            System.out.println("There is no element to remove");
+        } else if(size == 1) {
+            head = null;
+            tail = null;
+            size--;
         } else {
-            if(index == 0) {
-                head = node.next;
-            } else if(index == 1) {
-                node.next = node.next.next;
-            } else {
-                for(int i=0; i<index-1; i++) {
-                    node = node.next;
-                } node.next = node.next.next;
-            } 
-        } length--;
+            while(curr.next.next != null) {
+                curr = curr.next;
+            } curr.next = null;
+            tail = curr;
+            size--;
+        }
     }
+
+    public void remove(int index) {
+        ListNode curr = head;
+        if(index == 0) {
+            removeFirst();
+        } else if(index == size-1) {
+            removeLast();
+        } else if(index >= size) {
+            System.out.println("Index shouldn't be greater than size");
+        } else {
+            while(index != 1) {
+                curr = curr.next;
+            } curr.next = curr.next.next;
+            size--;
+        }
+    }
+
+    public int displayLastElm() {
+        return tail.data;
+    }
+
+
 }
