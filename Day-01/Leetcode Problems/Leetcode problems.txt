@@ -1,0 +1,19 @@
+🔹 Easy Problem:
+✅ Problem: Two Sum : https://leetcode.com/problems/two-sum/description/
+Concept: Basic array manipulation and hash map usage.
+
+🔹 Medium-Level Sliding Window / Prefix Sum:
+✅ Problem: Maximum Average Subarray I : https://leetcode.com/problems/maximum-average-subarray-i/
+Concept: Sliding window for continuous subarray sum.
+
+🔹 Two-Pointer Challenge:
+✅ Problem: 3Sum : https://leetcode.com/problems/3sum/
+Concept: Sorting + two-pointer approach for triplet sum to zero.
+
+🔹 Implementation-Heavy String Manipulation:
+✅ Problem: Longest Substring Without Repeating Characters : https://leetcode.com/problems/longest-substring-without-repeating-characters/
+Concept: Sliding window + set/map for string manipulation.
+
+🔹 Tough One to Push Limits:
+✅ Problem: Trapping Rain Water : https://leetcode.com/problems/trapping-rain-water/
+Concept: Two-pointer approach for calculating trapped water.
