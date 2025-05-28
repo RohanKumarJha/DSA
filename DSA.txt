@@ -4,7 +4,7 @@
 Day 1: Arrays & Strings
 Theory: Basic operations, sliding window, prefix sum, two-pointer
 Implement: Kadane’s Algorithm, Two-sum, Move Zeros, Longest Substring Without Repeating Characters
-Practice: 5 array/string problems
+Practice: 5 array/string problems 
 
 
   
