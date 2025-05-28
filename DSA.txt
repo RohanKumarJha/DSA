@@ -1,0 +1,86 @@
+🗓️ 15-Day DSA Plan
+
+
+Day 1: Arrays & Strings
+Theory: Basic operations, sliding window, prefix sum, two-pointer
+Implement: Kadane’s Algorithm, Two-sum, Move Zeros, Longest Substring Without Repeating Characters
+Practice: 5 array/string problems
+
+
+  
+Practice: 5 problems
+
+
+Day 3: Recursion & Backtracking
+Theory: Recursion trees, base case, stack memory
+Implement: N-Queens, Subsets/Permutations, Rat in a Maze
+Practice: 5 problems
+
+
+Day 4: Linked List
+Theory: Singly, Doubly, Circular, Fast/Slow pointer
+Implement: Reversal (Iterative/Recursive), Detect Cycle (Floyd’s), Merge two sorted lists
+Practice: 4–5 problems
+
+
+Day 5: Stack
+Theory: Stack operations, monotonic stack, infix-postfix
+Implement: Balanced Parentheses, Next Greater Element, Min Stack
+Practice: 5 problems
+
+
+Day 6: Queue & Deque
+Theory: Circular Queue, Deque, PriorityQueue
+Implement: Sliding Window Maximum, LRU Cache, Implement Queue using Stack and vice versa
+Practice: 3–4 problems
+
+
+Day 7: Hashing
+Theory: HashMap, HashSet, collision handling
+Implement: Count frequencies, Group Anagrams, Longest Consecutive Sequence
+Practice: 5 problems
+
+
+Day 8: Trees – Basics
+Theory: BST, Binary Tree, traversals
+Implement: Inorder/Preorder/Postorder (Iterative + Recursive), Height, Diameter, Mirror
+Practice: 4–5 problems
+
+
+Day 9: Trees – Advanced
+Implement: LCA (Lowest Common Ancestor), Serialize/Deserialize, Flatten Binary Tree
+View problems (top, bottom, left, right)
+Practice: 4–5 problems
+
+
+Day 10: Heap/Priority Queue
+Theory: Min Heap, Max Heap, Heapify
+Implement: K Largest Elements, Median in Stream, Merge K Sorted Lists
+Practice: 3–4 problems
+
+
+Day 11: Graphs – Basics
+Theory: Adjacency list/matrix, BFS, DFS
+Implement: Graph Traversals (BFS/DFS), Detect Cycle (BFS/DFS), Topological Sort
+Practice: 3–4 problems
+
+
+Day 12: Graphs – Advanced
+Implement: Dijkstra’s, Prim’s & Kruskal’s (MST), Union-Find
+Practice: 3–4 problems
+
+
+Day 13: Dynamic Programming – Basics
+Theory: Recursion → Memoization → Tabulation
+Implement: Fibonacci, Climbing Stairs, 0/1 Knapsack, Subset Sum
+Practice: 4–5 problems
+
+
+Day 14: DP – Advanced
+Implement: Longest Increasing Subsequence (LIS), Longest Common Subsequence (LCS), Matrix Chain Multiplication
+Practice: 4–5 problems
+
+
+Day 15: Tries + Revision + Mock
+Implement: Trie Insert/Search/Delete, Word Dictionary, Auto-complete, Revise weak topics
+Take 1–2 mock contests or a timed test
